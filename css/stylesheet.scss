@@ -1,0 +1,9 @@
+$arvo: 'Arvo', serif;
+$raleway: 'Raleway', sans-serif;
+$primary-color: #555;
+
+
+body {
+	font: 100% $raleway;
+	color: $primary-color;
+}
