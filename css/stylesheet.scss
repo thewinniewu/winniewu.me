@@ -3,7 +3,7 @@ $arvo: 'Arvo', serif;
 $raleway: 'Raleway', sans-serif;
 
 // font sizes
-$h1size: 36px;
+$h1size: 40px;
 $h2size: 30px;
 
 
@@ -15,7 +15,7 @@ $triangleside: $tsize2 solid black;
 
 // colors
 $primary-color: #555;
-$hover-color: #fff;
+$hover-color: #999;
 
 /* --------------------------------------------------------- FONTS */
 body, html {
@@ -25,10 +25,11 @@ body, html {
 	color: $primary-color;
 }
 
+
 h1 {
     font-size: $h1size;
     font: 100% $raleway;
-    color: #000;
+    color: $primary-color;
 }
 
 a {
@@ -48,17 +49,36 @@ a:hover {
 	height: 10px;
 }
 
+
+
 #container {
 	max-width: 100%;
-	min-height: 95%;
+	height: 100%;
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
 	overflow: hidden;
 }
 
+#containerbg {
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-attachment:fixed;
+    -webkit-filter: blur(5px);
+    -khtml-opacity:.50; 
+    -moz-opacity:.50; 
+    -ms-filter:"alpha(opacity=50)";
+     filter:alpha(opacity=50);
+     filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+     opacity:.50; 
+    -webkit-filter: grayscale(100%);
+    position:absolute;
+    width: 100%;
+    height:100%;
+}
+
 #menu {
-	margin-top: 20px;
+	margin-top: 3.5%;
 	width: 80%;
 	height: 5%;
 	position:relative;
@@ -67,10 +87,6 @@ a:hover {
 	font-size: $h1size;
     padding-bottom: 10px;
     border-bottom: 5px solid #000;		
-   
-    a {
-       text-align: right;
-    }
 }
 
 
@@ -80,7 +96,7 @@ a:hover {
 	position: relative;
 	margin-left: auto;
     margin-right: auto;
-    margin-top: 4%;
+    margin-top: 6%;
 }
 
 
@@ -90,6 +106,8 @@ a:hover {
     border-left: $triangleborder; 
     border-right: $triangleborder;
     border-bottom: $triangleside;
+    transition: border-bottom-color 0.5s ease-in-out;
+    &:hover { border-bottom-color: rgba(255,255,255,0.5); }
 }
 
 #triangle-down {
@@ -98,6 +116,8 @@ a:hover {
     border-left: $triangleborder; 
     border-right: $triangleborder;
     border-top: $triangleside;
+    transition: border-top-color 0.5s ease-in-out;
+    &:hover { border-top-color: rgba(255,255,255,0.5); }
 }
 
 #artlink {
@@ -119,9 +139,10 @@ a:hover {
 #footer {
 	position: absolute;
 	bottom: 0;
+    margin: 0;
 	width: 100%;
 	background: #000;
-	height:10px;
+	height: 10px;
 }
 
 /* ----------------------------------------------- RESPONSIVE STRUCT */

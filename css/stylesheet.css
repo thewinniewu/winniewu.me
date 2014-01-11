@@ -6,9 +6,9 @@ body, html {
   color: #555555; }
 
 h1 {
-  font-size: 36px;
+  font-size: 40px;
   font: 100% "Raleway", sans-serif;
-  color: #000; }
+  color: #555555; }
 
 a {
   font: 100% "Arvo", serif;
@@ -16,7 +16,7 @@ a {
   text-decoration: none; }
 
 a:hover {
-  color: white; }
+  color: #999999; }
 
 /* -------------------------------------------------------- HOMEPAGE */
 #top {
@@ -25,24 +25,38 @@ a:hover {
 
 #container {
   max-width: 100%;
-  min-height: 95%;
+  height: 100%;
   position: relative;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden; }
 
+#containerbg {
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-filter: blur(5px);
+  -khtml-opacity: .50;
+  -moz-opacity: .50;
+  -ms-filter: "alpha(opacity=50)";
+  filter: alpha(opacity=50);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+  opacity: .50;
+  -webkit-filter: grayscale(100%);
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
 #menu {
-  margin-top: 20px;
+  margin-top: 3.5%;
   width: 80%;
   height: 5%;
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  font-size: 36px;
+  font-size: 40px;
   padding-bottom: 10px;
   border-bottom: 5px solid #000; }
-  #menu a {
-    text-align: right; }
 
 #w-wrapper {
   padding: 20px;
@@ -50,21 +64,27 @@ a:hover {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 4%; }
+  margin-top: 6%; }
 
 #triangle-up {
   width: 0;
   height: 0;
   border-left: 85 solid transparent;
   border-right: 85 solid transparent;
-  border-bottom: 147.22 solid black; }
+  border-bottom: 147.22 solid black;
+  transition: border-bottom-color 0.5s ease-in-out; }
+  #triangle-up:hover {
+    border-bottom-color: rgba(255, 255, 255, 0.5); }
 
 #triangle-down {
   width: 0;
   height: 0;
   border-left: 85 solid transparent;
   border-right: 85 solid transparent;
-  border-top: 147.22 solid black; }
+  border-top: 147.22 solid black;
+  transition: border-top-color 0.5s ease-in-out; }
+  #triangle-down:hover {
+    border-top-color: rgba(255, 255, 255, 0.5); }
 
 #artlink {
   font-size: 30px;
@@ -83,6 +103,7 @@ a:hover {
 #footer {
   position: absolute;
   bottom: 0;
+  margin: 0;
   width: 100%;
   background: #000;
   height: 10px; }
