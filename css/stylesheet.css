@@ -5,6 +5,11 @@ body, html {
   font: 100% "Raleway", sans-serif;
   color: #555555; }
 
+h1 {
+  font-size: 36px;
+  font: 100% "Raleway", sans-serif;
+  color: #000; }
+
 a {
   font: 100% "Arvo", serif;
   color: #555555;
@@ -43,24 +48,37 @@ a:hover {
   padding: 20px;
   max-width: 60%;
   position: relative;
-  margin: auto;
-  margin-top: 5%; }
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%; }
 
 #triangle-up {
   width: 0;
   height: 0;
-  border-left: 80 solid transparent;
-  border-right: 80 solid transparent;
-  border-bottom: 138.56 solid black; }
+  border-left: 85 solid transparent;
+  border-right: 85 solid transparent;
+  border-bottom: 147.22 solid black; }
 
 #triangle-down {
-  margin-top: -138.56;
-  margin-left: 80;
   width: 0;
   height: 0;
-  border-left: 80 solid transparent;
-  border-right: 80 solid transparent;
-  border-top: 138.56 solid black; }
+  border-left: 85 solid transparent;
+  border-right: 85 solid transparent;
+  border-top: 147.22 solid black; }
+
+#artlink {
+  font-size: 30px;
+  line-height: 80px;
+  margin-top: -206.108;
+  margin-left: 180;
+  position: absolute; }
+
+#codelink {
+  font-size: 30px;
+  line-height: 80px;
+  margin-top: -206.108;
+  margin-left: 517;
+  position: absolute; }
 
 #footer {
   position: absolute;

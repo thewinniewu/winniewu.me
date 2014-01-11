@@ -4,11 +4,11 @@ $raleway: 'Raleway', sans-serif;
 
 // font sizes
 $h1size: 36px;
-$h2size: 25px;
+$h2size: 30px;
 
 
 // equilateral triangles
-$tsize: 80; //need to change tmovx in scripts.js when this is changed
+$tsize: 85; //need to change tmovx in scripts.js when this is changed
 $tsize2: ($tsize * 2) * 0.866;
 $triangleborder: $tsize solid transparent;
 $triangleside: $tsize2 solid black;
@@ -23,6 +23,12 @@ body, html {
 	padding: 0;
 	font: 100% $raleway;
 	color: $primary-color;
+}
+
+h1 {
+    font-size: $h1size;
+    font: 100% $raleway;
+    color: #000;
 }
 
 a {
@@ -72,8 +78,9 @@ a:hover {
     padding: 20px;
     max-width: 60%;
 	position: relative;
-	margin: auto;
-    margin-top: 5%;
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
 }
 
 
@@ -86,8 +93,6 @@ a:hover {
 }
 
 #triangle-down {
-    margin-top: -$tsize2;
-    margin-left: $tsize;
     width: 0;
     height: 0;
     border-left: $triangleborder; 
@@ -95,8 +100,22 @@ a:hover {
     border-top: $triangleside;
 }
 
+#artlink {
+    font-size: $h2size;
+    line-height: $h2size + 50;
+    margin-top: -$tsize2 * 1.4;
+    margin-left: $tsize * 2 + 10;
+    position: absolute;
+}
 
-
+#codelink {
+    font-size: $h2size;
+    line-height: $h2size + 50;
+    margin-top: - $tsize2 * 1.4;
+    margin-left: $tsize * 6 + 7;
+    position: absolute;
+}
+     
 #footer {
 	position: absolute;
 	bottom: 0;
