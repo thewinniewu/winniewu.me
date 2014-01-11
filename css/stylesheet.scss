@@ -1,9 +1,120 @@
+// fonts
 $arvo: 'Arvo', serif;
 $raleway: 'Raleway', sans-serif;
+
+// font sizes
+$h1size: 36px;
+$h2size: 25px;
+
+
+// equilateral triangles
+$tsize: 80; //need to change tmovx in scripts.js when this is changed
+$tsize2: ($tsize * 2) * 0.866;
+$triangleborder: $tsize solid transparent;
+$triangleside: $tsize2 solid black;
+
+// colors
 $primary-color: #555;
+$hover-color: #fff;
 
-
-body {
+/* --------------------------------------------------------- FONTS */
+body, html {
+	margin: 0;
+	padding: 0;
 	font: 100% $raleway;
 	color: $primary-color;
+}
+
+a {
+	font: 100% $arvo;
+	color: $primary-color;
+	text-decoration: none;
+}
+
+a:hover {
+	color: $hover-color;
+}
+
+
+/* -------------------------------------------------------- HOMEPAGE */
+#top {
+	background: #000;
+	height: 10px;
+}
+
+#container {
+	max-width: 100%;
+	min-height: 95%;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+#menu {
+	margin-top: 20px;
+	width: 80%;
+	height: 5%;
+	position:relative;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: $h1size;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #000;		
+   
+    a {
+       text-align: right;
+    }
+}
+
+
+#w-wrapper {
+    padding: 20px;
+    max-width: 60%;
+	position: relative;
+	margin: auto;
+    margin-top: 5%;
+}
+
+
+#triangle-up {
+    width: 0;
+    height: 0;
+    border-left: $triangleborder; 
+    border-right: $triangleborder;
+    border-bottom: $triangleside;
+}
+
+#triangle-down {
+    margin-top: -$tsize2;
+    margin-left: $tsize;
+    width: 0;
+    height: 0;
+    border-left: $triangleborder; 
+    border-right: $triangleborder;
+    border-top: $triangleside;
+}
+
+
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background: #000;
+	height:10px;
+}
+
+/* ----------------------------------------------- RESPONSIVE STRUCT */
+@media (max-width: 800px) {
+       /* Smaller Resolution Desktops and Laptops */
+}
+@media (max-width: 650px) {
+       /* Smaller devices */
+}
+@media (max-width: 450px) {
+       /* Even Smaller devices */
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+       /* Even Smaller devices */
 }

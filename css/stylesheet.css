@@ -1,3 +1,80 @@
-body {
+/* --------------------------------------------------------- FONTS */
+body, html {
+  margin: 0;
+  padding: 0;
   font: 100% "Raleway", sans-serif;
   color: #555555; }
+
+a {
+  font: 100% "Arvo", serif;
+  color: #555555;
+  text-decoration: none; }
+
+a:hover {
+  color: white; }
+
+/* -------------------------------------------------------- HOMEPAGE */
+#top {
+  background: #000;
+  height: 10px; }
+
+#container {
+  max-width: 100%;
+  min-height: 95%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden; }
+
+#menu {
+  margin-top: 20px;
+  width: 80%;
+  height: 5%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 36px;
+  padding-bottom: 10px;
+  border-bottom: 5px solid #000; }
+  #menu a {
+    text-align: right; }
+
+#w-wrapper {
+  padding: 20px;
+  max-width: 60%;
+  position: relative;
+  margin: auto;
+  margin-top: 5%; }
+
+#triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 80 solid transparent;
+  border-right: 80 solid transparent;
+  border-bottom: 138.56 solid black; }
+
+#triangle-down {
+  margin-top: -138.56;
+  margin-left: 80;
+  width: 0;
+  height: 0;
+  border-left: 80 solid transparent;
+  border-right: 80 solid transparent;
+  border-top: 138.56 solid black; }
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #000;
+  height: 10px; }
+
+/* ----------------------------------------------- RESPONSIVE STRUCT */
+@media (max-width: 800px) {
+  /* Smaller Resolution Desktops and Laptops */ }
+@media (max-width: 650px) {
+  /* Smaller devices */ }
+@media (max-width: 450px) {
+  /* Even Smaller devices */ }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Even Smaller devices */ }
