@@ -3,6 +3,7 @@ body, html {
   margin: 0;
   padding: 0;
   font: 100% "Raleway", sans-serif;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
   color: #555555; }
 
 h1 {
@@ -13,13 +14,17 @@ h1 {
 a {
   font: 100% "Arvo", serif;
   color: #555555;
-  text-decoration: none; }
+  text-decoration: none;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.3); }
 
 a:hover {
   color: #999999; }
 
 /* -------------------------------------------------------- HOMEPAGE */
 #top {
+  position: absolute;
+  width: 100%;
+  margin: 0;
   background: #000;
   height: 10px; }
 
@@ -47,7 +52,7 @@ a:hover {
   width: 100%;
   height: 100%; }
 
-#menu {
+#name, #nav {
   margin-top: 3.5%;
   width: 80%;
   height: 5%;
@@ -55,16 +60,43 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   font-size: 40px;
+  line-height: 70px;
   padding-bottom: 10px;
   border-bottom: 5px solid #000; }
 
-#w-wrapper {
+#nav {
+  margin-top: -5%;
+  text-align: right;
+  border-bottom: none; }
+  #nav a {
+    font-size: 30px; }
+
+.w-wrapper-outer {
   padding: 20px;
-  max-width: 60%;
+  max-width: 70%;
   position: relative;
   margin-left: auto;
   margin-right: auto;
   margin-top: 6%; }
+
+.w-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute; }
+
+#home {
+  position: relative;
+  width: 85.71429%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+
+#code {
+  margin-top: -2%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: none; }
 
 #triangle-up {
   width: 0;
@@ -89,14 +121,14 @@ a:hover {
 #artlink {
   font-size: 30px;
   line-height: 80px;
-  margin-top: -206.108;
+  margin-top: 235.552;
   margin-left: 180;
   position: absolute; }
 
 #codelink {
   font-size: 30px;
   line-height: 80px;
-  margin-top: -206.108;
+  margin-top: 235.552;
   margin-left: 517;
   position: absolute; }
 

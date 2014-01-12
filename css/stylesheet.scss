@@ -1,11 +1,16 @@
 // fonts
 $arvo: 'Arvo', serif;
 $raleway: 'Raleway', sans-serif;
+$antialias: 0 0 1px rgba(0,0,0,0.3);
 
 // font sizes
 $h1size: 40px;
 $h2size: 30px;
 
+
+// regular box to home ratios
+$wrapper-width: 70%;
+$home-width: percentage(60%/$wrapper-width);
 
 // equilateral triangles
 $tsize: 85; //need to change tmovx in scripts.js when this is changed
@@ -22,7 +27,8 @@ body, html {
 	margin: 0;
 	padding: 0;
 	font: 100% $raleway;
-	color: $primary-color;
+	text-shadow: $antialias;
+    color: $primary-color;
 }
 
 
@@ -36,6 +42,7 @@ a {
 	font: 100% $arvo;
 	color: $primary-color;
 	text-decoration: none;
+    text-shadow: $antialias; 
 }
 
 a:hover {
@@ -45,7 +52,10 @@ a:hover {
 
 /* -------------------------------------------------------- HOMEPAGE */
 #top {
-	background: #000;
+    position:absolute;
+	width: 100%;
+    margin: 0;
+    background: #000;
 	height: 10px;
 }
 
@@ -77,28 +87,62 @@ a:hover {
     height:100%;
 }
 
-#menu {
-	margin-top: 3.5%;
-	width: 80%;
-	height: 5%;
-	position:relative;
-	margin-left: auto;
-	margin-right: auto;
-	font-size: $h1size;
-    padding-bottom: 10px;
-    border-bottom: 5px solid #000;		
+#name {
+    margin-top:3.5%;
+    width: 80%;
+    height: 5%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: $h1size; 
+    line-height: $h1size + 30px;
+    padding-bottom: 10px; 
+    border-bottom: 5px solid #000;
 }
 
 
-#w-wrapper {
+#nav {
+	@extend #name;
+    margin-top: -5%;
+    text-align: right;
+    border-bottom: none;
+    a {
+        font-size: $h2size;   
+    }
+}
+
+
+.w-wrapper-outer {
     padding: 20px;
-    max-width: 60%;
+    max-width: $wrapper-width;
 	position: relative;
 	margin-left: auto;
     margin-right: auto;
     margin-top: 6%;
+
 }
 
+.w-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+    #home {
+        position: relative;
+        width: $home-width;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }     
+    
+    #code {
+        margin-top: -2%;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
 
 #triangle-up {
     width: 0;
@@ -123,7 +167,7 @@ a:hover {
 #artlink {
     font-size: $h2size;
     line-height: $h2size + 50;
-    margin-top: -$tsize2 * 1.4;
+    margin-top: $tsize2 * 1.6;
     margin-left: $tsize * 2 + 10;
     position: absolute;
 }
@@ -131,10 +175,13 @@ a:hover {
 #codelink {
     font-size: $h2size;
     line-height: $h2size + 50;
-    margin-top: - $tsize2 * 1.4;
+    margin-top: $tsize2 * 1.6;
     margin-left: $tsize * 6 + 7;
     position: absolute;
 }
+ 
+
+ 
      
 #footer {
 	position: absolute;
@@ -144,6 +191,7 @@ a:hover {
 	background: #000;
 	height: 10px;
 }
+
 
 /* ----------------------------------------------- RESPONSIVE STRUCT */
 @media (max-width: 800px) {

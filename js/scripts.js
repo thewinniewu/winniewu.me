@@ -7,7 +7,11 @@ var dOffsetsX = [0, 1, 3, 4, 7, 8, 1, 2, 3, 5, 6, 7, 2, 6];
 
 $(document).ready( function() {
 
-var wrapper = document.getElementById("w-wrapper");
+// HOME TRIANGLES RENDERING
+
+
+ 
+var wrapper = document.getElementById("home");
 
 for (var i = 0; i < 14; i++) {
     var triangle = document.createElement("div");
@@ -26,16 +30,13 @@ for (var i = 0; i < 14; i++) {
    
     wrapper.appendChild(triangle);
 }
-    var artlink = document.createElement("div");
-    artlink.id = "artlink";
-    artlink.innerHTML = '<a href="http://people.fas.harvard.edu/~weiwu/home.html" target=blank> ART </a>'; 
-    wrapper.appendChild(artlink);
-    
-    var codelink = document.createElement("div");
-    codelink.id = "codelink";
-    codelink.innerHTML ='<a href="http://www.github.com/thewinniewu" target=blank> CODE </a>';
-    wrapper.appendChild(codelink);
-
-
-
 });
+
+// NAVIGATION LOGIC
+function navigate(target) {
+   $(".w-wrapper").not("#" + target).fadeOut();
+    $("#" + target).fadeIn(); 
+    
+}
+
+
